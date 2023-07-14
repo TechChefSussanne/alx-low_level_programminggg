@@ -9,24 +9,26 @@
  */
 int main(void)
 {
-    srand(time(NULL)); // Initialize random seed
+	int n;
 
-    int n = rand() % 199 - 99; // Generate a random number between -99 and 99
+	srand(time(NULL)); /* Initialize random seed */
 
-    printf("The number %d is ", n);
+	n = rand() % 199 - 99; /* Generate a random number between -99 and 99 */
 
-    if (n > 0)
-    {
-        printf("positive\n");
-    }
-    else if (n == 0)
-    {
-        printf("zero\n");
-    }
-    else
-    {
-        printf("negative\n");
-    }
+	printf("The number %d is ", n);
 
-    return 0;
+	if (n > 0)
+	{
+		printf("positive\n");
+	}
+	else if (n == 0)
+	{
+		printf("zero\n");
+	}
+	else
+	{
+		printf("negative\n");
+	}
+
+	return (0);
 }
