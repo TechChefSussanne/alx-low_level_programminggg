@@ -1,34 +1,35 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
-/**
+/*
  * main - Entry point of the program
  *
- * Return: Always 0 (Success)
+ * This program generates a random number and prints
+ * whether it is positive, negative, or zero.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	int n;
+    int n;
 
-	srand(time(NULL)); /* Initialize random seed */
+    srand(time(0));
+    n = rand() - RAND_MAX / 2;
 
-	n = rand() % 199 - 99; /* Generate a random number between -99 and 99 */
+    /* Check the value of n and print the corresponding message */
+    if (n > 0)
+    {
+        printf("%d is positive\n", n);
+    }
+    else if (n < 0)
+    {
+        printf("%d is negative\n", n);
+    }
+    else
+    {
+        printf("%d is zero\n", n);
+    }
 
-	printf("The number %d is ", n);
-
-	if (n > 0)
-	{
-		printf("positive\n");
-	}
-	else if (n == 0)
-	{
-		printf("zero\n");
-	}
-	else
-	{
-		printf("negative\n");
-	}
-
-	return (0);
+    return (0);
 }
