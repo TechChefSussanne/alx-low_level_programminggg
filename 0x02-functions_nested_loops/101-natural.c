@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - Entry point of the program
+ * main - Entry point
  *
  * Return: Always 0
  */
@@ -17,10 +16,12 @@ int main(void)
 			sum += i;
 	}
 
-	_putchar(sum / 1000 + '0'); /* Print thousands digit */
-	_putchar((sum % 1000) / 100 + '0'); /* Print hundreds digit */
-	_putchar((sum % 100) / 10 + '0'); /* Print tens digit */
-	_putchar(sum % 10 + '0'); /* Print ones digit */
+	_putchar((sum / 100000) + '0');
+	_putchar((sum / 10000) % 10 + '0');
+	_putchar((sum / 1000) % 10 + '0');
+	_putchar((sum / 100) % 10 + '0');
+	_putchar((sum / 10) % 10 + '0');
+	_putchar(sum % 10 + '0');
 	_putchar('\n');
 
 	return (0);
