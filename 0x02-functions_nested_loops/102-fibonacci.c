@@ -1,50 +1,48 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * _putchar - Writes a character to the standard output
+ * @c: The character to be written
  *
  * Return: On success 1
- * On error, -1 is returned, and errno is set appropriately.
+ * On error, -1 is returned and errno is set appropriately
  */
 int _putchar(char c)
 {
-  return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
 /**
- * print_fibonacci - prints the first 50 Fibonacci numbers
+ * print_fibonacci - Prints the first 50 Fibonacci numbers
  */
 void print_fibonacci(void)
 {
-  unsigned long int prev = 1, curr = 2, next, i;
+	unsigned long int num1 = 1, num2 = 2, next;
+	int i;
 
-  _putchar('1');
-  _putchar(',');
-  _putchar(' ');
-  _putchar('2');
-  _putchar(',');
-  _putchar(' ');
+	_putchar('1' + '0');
+	_putchar(',');
+	_putchar(' ');
 
-  for (i = 0; i < 48; i++)
-  {
-    next = prev + curr;
-    prev = curr;
-    curr = next;
+	_putchar('2' + '0');
+	_putchar(',');
+	_putchar(' ');
 
-    if (i != 47)
-    {
-      printf("%lu, ", next);
-    }
-    else
-    {
-      printf("%lu\n", next);
-    }
-  }
-}
+	for (i = 2; i < 50; i++)
+	{
+		next = num1 + num2;
+		_putchar((next / 10) + '0');
+		_putchar((next % 10) + '0');
 
-int main(void)
-{
-  print_fibonacci();
-  return (0);
+		if (i != 49)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
+
+		num1 = num2;
+		num2 = next;
+	}
+
+	_putchar('\n');
 }
