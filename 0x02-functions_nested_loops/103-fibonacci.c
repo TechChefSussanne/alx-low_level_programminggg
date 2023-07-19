@@ -1,25 +1,34 @@
 #include "main.h"
 
 /**
- * fibonacci_sum_even - Computes the sum of even-valued terms in Fibonacci
- * sequence up to a given limit.
- * @limit: The upper limit for Fibonacci sequence terms.
+ * main - Entry point
  *
- * Return: The sum of even-valued terms.
+ * Description: Finds and prints the sum of the even-valued terms
+ *              in the Fibonacci sequence below 4 million.
+ *
+ * Return: Always 0 (Success)
  */
-int fibonacci_sum_even(int limit)
+int main(void)
 {
-	int term1 = 1, term2 = 2, current_term, sum = 0;
+	int i;
+	unsigned long int j, k, next, sum;
 
-	while (term1 <= limit)
+	j = 1;
+	k = 2;
+	sum = 0;
+
+	for (i = 1; i <= 33; ++i)
 	{
-		if (term1 % 2 == 0)
-			sum += term1;
-
-		current_term = term1 + term2;
-		term1 = term2;
-		term2 = current_term;
+		if (j < 4000000 && (j % 2) == 0)
+		{
+			sum += j;
+		}
+		next = j + k;
+		j = k;
+		k = next;
 	}
 
-	return sum;
+	_putchar(sum);
+
+	return (0);
 }
