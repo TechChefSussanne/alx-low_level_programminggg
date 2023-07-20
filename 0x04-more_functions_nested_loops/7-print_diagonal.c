@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * print_diagonal - Draws a diagonal line on the terminal
- * @n: Length of the diagonal
+ * print_diagonal - Draws a diagonal line on the terminal.
+ * @n: Length of the diagonal.
  *
- * Description:
- * This function prints a diagonal line on the terminal using the character '\'.
- * The length of the diagonal is specified by the parameter 'n'.
- *
- * If 'n' is less than or equal to 0, this function does not print anything.
+ * Description: This function prints a diagonal line on the terminal using the
+ *              character '\'. The length of the diagonal is specified by the
+ *              parameter 'n'.
  *
  * Return: void
  */
 void print_diagonal(int n)
 {
+    /* If 'n' is less than or equal to 0, this function does not print anything. */
     int a, b;
 
     if (n <= 0)
