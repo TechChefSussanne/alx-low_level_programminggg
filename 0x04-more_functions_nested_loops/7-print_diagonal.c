@@ -4,8 +4,11 @@
  * print_diagonal - Draws a diagonal line on the terminal
  * @n: Length of the diagonal
  *
- * Description: This function prints a diagonal line using '\' character
- *              on the terminal. The length of the diagonal is determined by 'n'.
+ * Description:
+ * This function prints a diagonal line on the terminal using the character '\'.
+ * The length of the diagonal is specified by the parameter 'n'.
+ *
+ * If 'n' is less than or equal to 0, this function does not print anything.
  *
  * Return: void
  */
