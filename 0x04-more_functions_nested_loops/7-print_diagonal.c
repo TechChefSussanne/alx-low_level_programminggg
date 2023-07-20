@@ -10,23 +10,17 @@
  */
 void print_diagonal(int n)
 {
-    /* Variables for loop iterations */
     int a, b;
 
-    /* Check if n is non-positive */
     if (n <= 0)
         _putchar('\n');
-
-    /* Loop for printing the diagonal */
     for (a = 0; a < n; a++)
     {
-        /* Loop for printing leading spaces */
+    
         for (b = 0; b < a; b++)
         {
             _putchar(' ');
         }
-
-        /* Print the diagonal character */
         _putchar('\\');
         _putchar('\n');
     }
