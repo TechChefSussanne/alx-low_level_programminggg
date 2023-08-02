@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * _puts_recursion - Recursively prints a string, followed by a newline.
- * @s: Pointer to the string to be printed.
- * Description: This function prints each character of the string recursively until the null terminator is encountered, then adds a newline.
+ * _puts_recursion - prints a string, followed by a new line.
+ * @s: string
+ * Return: no return.
  */
 void _puts_recursion(char *s)
 {
